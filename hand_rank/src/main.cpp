@@ -71,16 +71,16 @@ int main(){
   Deck deck = Deck();
   Card cards[7];
   deal_seven(cards, deck);
-  auto start = std::chrono::high_resolution_clock::now();
+  //auto start = std::chrono::high_resolution_clock::now();
   for (int i=0;i<10000;++i){
-    //deal_seven(cards, deck);
-    //print_cards(cards);
+    deal_seven(cards, deck);
+    print_cards(cards);
     std::pair<Rank,unsigned int>result= hand_evaluator(cards);
-    //print_rank(result.first);
+    print_rank(result.first);
   }
-  auto end = std::chrono::high_resolution_clock::now();
-  std::chrono::duration<double> elapsed = end - start;
+  //auto end = std::chrono::high_resolution_clock::now();
+  //std::chrono::duration<double> elapsed = end - start;
 
-  std::cout << "Elapsed time: " << elapsed.count() << " seconds" << std::endl;
+  //std::cout << "Elapsed time: " << elapsed.count() << " seconds" << std::endl;
   return 0;
 }

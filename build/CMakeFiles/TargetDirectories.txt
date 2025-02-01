@@ -1,3 +1,0 @@
-/home/phagmaier/Desktop/Code/hand-ranker/build/CMakeFiles/runme.dir
-/home/phagmaier/Desktop/Code/hand-ranker/build/CMakeFiles/edit_cache.dir
-/home/phagmaier/Desktop/Code/hand-ranker/build/CMakeFiles/rebuild_cache.dir

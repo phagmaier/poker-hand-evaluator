@@ -54,3 +54,12 @@ with it and that's how we get the hash of our cards and are able to search our d
 3. Find a way to not have to do all 21 combos
 4. Faster way to get the Rank of a pair
 
+
+## HOW TO RUN
+No dependies and I included a cmake file so all you have to do is:
+1. Go into the build directory in the root directory 
+2. type cmake .. && make && ./runme
+
+## HELP
+If you somehow stumble upon this and you want to contribute feel free to do so or 
+just take the code and do whatever you want to it
