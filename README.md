@@ -21,7 +21,7 @@ If you want to learn about the algorithm I'd read the link.
 | [make_hands.cpp](make/hands/src/make_hands.cpp) | actually computes all the unique hands and stores them in data folder |
 | [hand_evaluator.cpp](hand_rank/src/hand_evaluator.cpp) | evaluates the hand determines rank and can tell you which players hand is strongest |
 | [make_dics.h](hand_rank/src/make_dics.h) |  |
-| [make_dics.h](data) | where all the unique combos are stored in txt files |
+| [Data](data) | where all the unique combos are stored in txt files |
 
 ## RESULTS/PERFORMANCE
 When lazily checking the speed it appears that my evaluator can
