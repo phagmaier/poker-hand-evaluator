@@ -22,7 +22,7 @@ const unsigned int get_hash(Card *cards,std::vector<unsigned int> &indexes){
 }
 
 unsigned int check_flush(Card *cards, const unsigned int hash, std::vector<unsigned int> &indexes){
-  if(cards[indexes[0]].suit* cards[indexes[1]].suit* cards[indexes[2]].suit* cards[indexes[3]].suit* cards[indexes[4]].suit){
+  if(cards[indexes[0]].suit & cards[indexes[1]].suit & cards[indexes[2]].suit & cards[indexes[3]].suit & cards[indexes[4]].suit){
     return flush_dic[hash];
   }
   return 0;
@@ -54,7 +54,7 @@ Rank get_rank(const unsigned int val){
   if (val <= TWO_PAIR_NUM){
     return TWO;
   }
-  if (val <= TRIPS){
+  if (val <= TRIPS_NUM){
     return TRIPS;
   }
   if (val <= FULL_HOUSE_NUM){
@@ -87,23 +87,37 @@ std::pair<Rank, unsigned int> hand_evaluator(Card *cards){
       else{
         cur = {FLUSH,flush};
       }
-      set_best(cur,best);
     }
     else if (straight){
-      if (rank > FLUSH){
+      if (rank > STRAIGHT){
         cur = {rank,val};
       }
       else{
-        cur = {STRAIGHT,flush};
+        cur = {STRAIGHT,straight};
       }
-      set_best(cur,best);
     }
     else{
       cur = {rank,val};
-      set_best(cur,best);
     }
 
+    set_best(cur,best);
   }
   return best;
+}
 
+int get_p1_result(std::pair<Rank,unsigned int> &p1, std::pair<Rank,unsigned int> &p2){
+  if (p1.first > p2.first){
+    return 1;
+  }
+  if (p1.first < p2.first){
+    return -1;
+  } 
+  if (p1.second > p2.second){
+    return 1;
+  }
+  if (p1.second < p2.second){
+    return -1;
+  }
+  //tie
+  return 0;
 }

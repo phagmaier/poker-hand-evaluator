@@ -21,3 +21,4 @@ unsigned int check_flush(Card *cards, const unsigned int hash, std::vector<unsig
 void set_best(std::pair<Rank, unsigned int> &cur, std::pair<Rank, unsigned int> &best);
 Rank get_rank(const unsigned int val);
 std::pair<Rank, unsigned int> hand_evaluator(Card *cards);
+int get_p1_result(std::pair<Rank,unsigned int> &p1, std::pair<Rank,unsigned int> &p2);
