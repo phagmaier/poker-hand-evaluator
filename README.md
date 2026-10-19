@@ -1,3 +1,5 @@
+> **Earlier iteration.** Superseded by [PHE](https://github.com/phagmaier/PHE), a faster Zig evaluator using comptime (~5.2M 7-card hands/sec).
+
 # POKER HAND EVALUATOR
 
 ## DESCRIPTION
